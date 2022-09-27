@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 콜백함수 : 인수로 넘겨주는 함수
+        function callback () {
+            document.write("<p>콜백함수입니다</p>")
+        }
+        // 함수 인수로 넣어줄 때 함수 이름만 사용 / 익명함수
+        setInterval(callback, 1000);
+        setInterval(function(){
+            document.write("<p>익명함수로 만든 콜백함수입니다</p>")
+        }, 1500);
+        // setInterval을 사용하여 화살표 함수로 만든 콜백함수입니다를
+        // 3초마다 출력하는 코드로 작성하세요.
+        setInterval(
+            ()=>document.write("<p>화살표함수로 만든 콜백함수입니다</p>"),3000
+        );
+    </script>
+</body>
+</html>
